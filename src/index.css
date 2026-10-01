@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-comic: 'Bangers', cursive;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+}
+
+.font-comic {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.05em;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Comic Graphic Novel Halftone & Texture Utilities */
+.bg-halftone {
+  background-image: radial-gradient(rgba(249, 115, 22, 0.12) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.bg-halftone-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.comic-panel-border {
+  border: 3px solid #171717;
+  box-shadow: 4px 4px 0px #0a0a0a;
+}
+
+.comic-panel-border-glow {
+  border: 3px solid #ea580c;
+  box-shadow: 0 0 20px rgba(234, 88, 12, 0.25), 4px 4px 0px #0a0a0a;
+}
+
+.comic-badge {
+  text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+@keyframes magmaGlow {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 12px rgba(249, 115, 22, 0.6)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 24px rgba(239, 68, 68, 0.9)); }
+}
+
+.animate-magma-glow {
+  animation: magmaGlow 3s ease-in-out infinite;
+}
+
+@keyframes screenShake {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3px, 2px); }
+  40% { transform: translate(3px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 3px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-shake {
+  animation: screenShake 0.4s ease-in-out infinite;
+}
+

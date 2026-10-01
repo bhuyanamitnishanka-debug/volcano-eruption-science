@@ -1,0 +1,6 @@
+{
+  "name": "volcano-eruption-science",
+  "description": "An animated graphic novel and interactive geological simulation exploring mantle convection, plate tectonics, magma chambers, and volcanic eruptions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
